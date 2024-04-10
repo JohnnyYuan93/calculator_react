@@ -95,7 +95,6 @@ function App() {
     <div className="App"> 
     <div className="main">
       <h1>Tip Calculator</h1>
-      {/* Bill input */}
     <label>Bill total</label> 
       <input 
           type="text"
@@ -120,10 +119,10 @@ function App() {
               <span>{split}</span>
               <button onClick={splitPlus}>+</button>
           </div>
-          <div className="result">
-            <label>Split total</label>
-            <span>{splitTotal}</span>
-          </div>
+        </div>
+        <div className="result">
+          <label>Split total</label>
+          <span>{splitTotal}</span>
         </div>
       </div>
 
