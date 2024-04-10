@@ -1,16 +1,26 @@
 * {
   font-family: sans-serif;
 }
+
 input,
 button {
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
 }
+
 input {
   display: block;
   margin-bottom: 20px;
 }
+input[type="text"] { 
+  background: transparent; 
+  border: 0; 
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+  color: #555; 
+  font-size: 1.4rem; 
+} 
 button {
   border: 1px solid gray;
   background: whitesmoke;
@@ -30,3 +40,52 @@ label {
   padding-left: 1px; 
   color: rgba(0, 0, 0, 0.7); 
 } 
+
+body { 
+  background: #f2f2f2; 
+  color: #333; 
+  padding: 20px; 
+}
+
+.summary { 
+  background: #ffcc00; 
+  padding: 10px; 
+  border-radius: 10px; 
+  display: flex; 
+  justify-content: space-between; 
+  font-size: 1.7rem; 
+} 
+
+.summary label { 
+  line-height: 0.8rem; 
+} 
+
+.split-control { 
+  display: flex; 
+  align-items: center; 
+  justify-items: center; 
+} 
+
+.split-control span { 
+  display: block; 
+  padding: 0 3px; 
+} 
+
+.split button { 
+  border-radius: 99999999px; 
+  border: 0; 
+  width: 20px; 
+  height: 20px; 
+  background: #4caf50; 
+  color: #fff; 
+  cursor: pointer; 
+} 
+
+.result { 
+  text-align: right; 
+} 
+
+.main { 
+  width: 300px; 
+  margin: 20px; 
+}

@@ -6,7 +6,6 @@ function App() {
   const resultRef = useRef(null); 
   const [result, setResult] = useState(0); 
 
-  // tip calculator
   const [bill, setBill] = useState(""); 
   
   // State for storing tip percentage 
@@ -27,8 +26,7 @@ function App() {
       setTip(value); 
   } 
 
-  // Function to handle changes in the 
-  // bill total input 
+  // Function to handle changes in the bill total input 
   function handleBillChange(e) { 
       setBill(e.target.value); 
   } 
@@ -50,8 +48,7 @@ function App() {
       setSplitTotal(result); 
   } 
 
-  // useEffect hook to calculate the split total 
-  // whenever bill, tip, or split changes 
+  // useEffect hook to calculate the split total whenever bill, tip, or split changes 
   useEffect(() => { 
       calculate(); 
   }, [bill, tip, split]); 
@@ -60,9 +57,6 @@ function App() {
  
   function plus(e) { 
     e.preventDefault(); 
-    // const inputVal = inputRef.current.value; 
-    // const newResult = result + Number(inputVal); 
-    // setResult(newResult); 
     setResult((result) => result + Number(inputRef.current.value)); 
   } 
  
@@ -99,8 +93,10 @@ function App() {
  
   return (
     <div className="App"> 
-
-      <label>Bill total</label> 
+    <div className="main">
+      <h1>Tip Calculator</h1>
+      {/* Bill input */}
+    <label>Bill total</label> 
       <input 
           type="text"
           placeholder={"0.00"} 
@@ -110,7 +106,28 @@ function App() {
   
       {/* Tip input */} 
       <label>Tip</label> 
+      <input 
+          type="text"
+          placeholder={"10%"} 
+          value={tip} 
+          onChange={handleTipChange}
+      />
+      <div className="summary">
+        <div className="split">
+          <label>Split</label>
+          <div className="split-controls">
+              <button onClick={splitMinus}>-</button>
+              <span>{split}</span>
+              <button onClick={splitPlus}>+</button>
+          </div>
+          <div className="result">
+            <label>Split total</label>
+            <span>{splitTotal}</span>
+          </div>
+        </div>
+      </div>
 
+    </div>
       <div> 
         <h1>Simplest Working Calculator</h1> 
       </div> 
