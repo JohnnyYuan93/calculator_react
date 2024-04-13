@@ -1,7 +1,6 @@
 # Project Overview
 This project is a simple tip calculator built using React. It allows users to input the bill total, the tip percentage, and the number of people to split the bill with. The calculator then displays how much each person should pay.
-
-![image](https://github.com/JohnnyYuan93/calculator_react/assets/77047081/7cd50985-8e5b-4a61-9419-36608b7c1183)
+![alt text](image.png)
 
 ## Features
 - Input fields for bill total, tip percentage, and number of people
