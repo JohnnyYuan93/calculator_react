@@ -57,7 +57,7 @@ body {
 }
 
 .summary { 
-  background: #ffcc00; 
+  background: #8dd4e1; 
   padding: 10px; 
   border-radius: 10px; 
   display: flex; 
@@ -95,6 +95,24 @@ body {
 } 
 
 .main { 
-  width: 250px; 
+  width: 300px; 
   margin: 20px; 
+}
+
+.tip button{ 
+  display: inline-block;
+  font-size: 15px; 
+  color: black;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  background-color: #e3e572;
+}
+
+.tip button:hover { 
+  background-color: #4caf50; 
+  color: white; 
+} 
+
+.tip .selected {
+  background-color:#4caf50;
 }
